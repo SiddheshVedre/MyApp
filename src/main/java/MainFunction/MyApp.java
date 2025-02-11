@@ -1,6 +1,8 @@
 package MainFunction;
 import java.util.Scanner;
 
+import org.openqa.selenium.NoSuchElementException;
+
 import Module2.ImpFiles;
 import Verifation.ChangePassword;
 import Verifation.Varification;
@@ -13,6 +15,8 @@ public class MyApp {
 
     public static void main(String[] args) {
         
+    	
+    	try {
         Scanner sc = new Scanner(System.in);
         
         
@@ -78,6 +82,10 @@ public class MyApp {
         }
      
         	sc.close();
+    	}catch(NoSuchElementException e ) {
+    		
+    		System.out.println("Download " + "\\u001B[31m" + "myapk2-0.0.1-SNAPSHOT.jar" + "u001B[0m" + "Jar file in local System.");
+    	}
         	
    }
 
